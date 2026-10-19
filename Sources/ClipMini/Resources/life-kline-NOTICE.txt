@@ -1,0 +1,114 @@
+人生K线 / Life Destiny K-Line
+Copyright 2024-2025 Life-Kline Team
+
+本产品包含由 Life-Kline Team 开发的软件。
+
+官方网站: https://www.life-kline.com
+源代码仓库: https://github.com/miounet11/life-kline
+
+本项目使用了以下开源组件：
+
+----------------------------------------
+前端核心框架
+----------------------------------------
+
+React (MIT License)
+Copyright (c) Meta Platforms, Inc. and affiliates.
+https://reactjs.org/
+
+React Router (MIT License)
+Copyright (c) React Training LLC 2015-2019
+Copyright (c) Remix Software Inc. 2020-2025
+https://reactrouter.com/
+
+Vite (MIT License)
+Copyright (c) 2019-present, Yuxi (Evan) You and Vite contributors
+https://vitejs.dev/
+
+----------------------------------------
+UI 组件库
+----------------------------------------
+
+Tailwind CSS (MIT License)
+Copyright (c) Tailwind Labs, Inc.
+https://tailwindcss.com/
+
+Framer Motion (MIT License)
+Copyright (c) 2018 Framer B.V.
+https://www.framer.com/motion/
+
+Lucide React (ISC License)
+https://lucide.dev/
+
+Recharts (MIT License)
+Copyright (c) 2015-2024 Recharts Group
+https://recharts.org/
+
+----------------------------------------
+后端框架与工具
+----------------------------------------
+
+Express (MIT License)
+Copyright (c) 2009-2014 TJ Holowaychuk <tj@vision-media.ca>
+Copyright (c) 2013-2014 Roman Shtylman <shtylman+expressjs@gmail.com>
+Copyright (c) 2014-2015 Douglas Christopher Wilson <doug@somethingdoug.com>
+https://expressjs.com/
+
+Better-SQLite3 (MIT License)
+Copyright (c) 2016 Joshua Wise
+https://github.com/WiseLibs/better-sqlite3
+
+----------------------------------------
+核心功能库
+----------------------------------------
+
+Lunar-JavaScript (MIT License)
+Copyright (c) 2015-2024 6tail
+https://github.com/6tail/lunar-javascript
+
+bcryptjs (MIT License)
+Copyright (c) 2012 Nevins Bartolomeo
+Copyright (c) 2012 Shane Girish
+https://github.com/dcodeIO/bcrypt.js
+
+jsonwebtoken (MIT License)
+Copyright (c) 2015 Auth0, Inc. <support@auth0.com>
+https://github.com/auth0/node-jsonwebtoken
+
+nanoid (MIT License)
+Copyright 2017 Andrey Sitnik <andrey@sitnik.ru>
+https://github.com/ai/nanoid
+
+----------------------------------------
+其他依赖
+----------------------------------------
+
+dotenv (BSD-2-Clause License)
+Copyright (c) 2015, Scott Motte
+https://github.com/motdotla/dotenv
+
+html2canvas (MIT License)
+Copyright (c) 2012 Niklas von Hertzen
+https://html2canvas.hertzen.com/
+
+QRCode.react (ISC License)
+Copyright (c) 2015, Paul O'Shannessy
+https://github.com/zpao/qrcode.react
+
+node-cron (ISC License)
+Copyright (c) 2016 Lucas Merencia
+https://github.com/node-cron/node-cron
+
+nodemailer (MIT License)
+Copyright (c) 2011-2019 Andris Reinman
+https://nodemailer.com/
+
+----------------------------------------
+致谢
+----------------------------------------
+
+感谢所有为本项目做出贡献的开发者和社区成员。
+
+本软件按"原样"提供，不提供任何明示或暗示的保证。
+使用本软件需遵守 Apache License 2.0 的条款和条件。
+

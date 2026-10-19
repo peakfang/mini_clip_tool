@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>六爻节点图排盘</title>
+  <link rel="stylesheet" href="liuyao-styles.css" />
+</head>
+<body>
+  <div class="page">
+    <aside class="sidebar">
+      <h1>六爻节点图排盘</h1>
+      <p class="muted intro">输入时间与六爻，自动换算月建与日干支；支持手工六爻、时间起卦与铜钱起卦三种方式；装卦后指定用神，并同步标出原神、忌神、仇神。</p>
+
+      <section class="panel">
+        <h2>1. 时间与干支</h2>
+        <label>
+          <span>占测时间</span>
+          <div class="inline-row">
+            <input id="divinationTime" type="datetime-local" step="1" />
+            <button id="nowBtn" type="button" class="ghost small-btn">当前</button>
+          </div>
+        </label>
+        <label class="inline-check">
+          <input id="autoDerive" type="checkbox" checked />
+          <span>自动换算月建与日干支</span>
+        </label>
+        <div class="grid2">
+          <label>
+            <span>月建</span>
+            <select id="monthBranch"></select>
+          </label>
+          <label>
+            <span>日干</span>
+            <select id="dayStem"></select>
+          </label>
+        </div>
+        <label>
+          <span>日支</span>
+          <select id="dayBranch"></select>
+        </label>
+        <div id="derivedInfo" class="derived-info"></div>
+      </section>
+
+      <section class="panel">
+        <h2>2. 起卦方式</h2>
+        <div class="method-switch triple">
+          <label class="method-item active">
+            <input type="radio" name="inputMode" value="manual" checked />
+            <span>手工输入六爻</span>
+          </label>
+          <label class="method-item">
+            <input type="radio" name="inputMode" value="time" />
+            <span>时间起卦</span>
+          </label>
+          <label class="method-item">
+            <input type="radio" name="inputMode" value="coin" />
+            <span>铜钱起卦</span>
+          </label>
+        </div>
+
+        <div id="manualInputPanel" class="sub-panel">
+          <div class="section-caption">六爻自下而上，输入 6 / 7 / 8 / 9</div>
+          <div id="lineInputs" class="line-inputs"></div>
+          <div class="actions">
+            <button id="sampleBtn" type="button" class="ghost">填入示例</button>
+          </div>
+        </div>
+
+        <div id="autoInputPanel" class="sub-panel hidden">
+          <div id="autoCaption" class="section-caption">根据当前时间生成 6 个爻值，作为时间起卦的简化入口。</div>
+          <div class="actions compact top-gap">
+            <button id="autoRefreshBtn" type="button" class="ghost">取当前时刻并重算</button>
+          </div>
+          <div id="autoMeta" class="derived-badges auto-meta"></div>
+          <div id="autoPreview" class="auto-preview"></div>
+        </div>
+
+        <div class="actions top-gap">
+          <button id="renderBtn" type="button">装卦并计算</button>
+          <button id="copyChartBtn" type="button" class="ghost">复制当前排盘全文</button>
+        </div>
+        <div id="copyFeedback" class="copy-feedback muted small">会复制成适合直接贴给大模型解卦的纯文本。</div>
+      </section>
+
+      <section class="panel">
+        <h2>3. 用神</h2>
+        <p class="muted small">先装卦，再从本卦六爻中指定一个节点为用神。指定后会同步显示原神、忌神、仇神。</p>
+        <div id="useGodChooser" class="use-god-chooser empty-state">请先装卦</div>
+      </section>
+    </aside>
+
+    <main class="workspace">
+      <section id="summary" class="summary empty-state">请先输入六爻并点击“装卦并计算”。</section>
+
+      <section class="board panel">
+        <div class="board-header">
+          <div>
+            <h2>六爻状态</h2>
+            <p class="muted small">左侧只显示状态卡片；点击任一爻，在右侧查看它的局部关系边图、完整边列表与状态修正项。</p>
+          </div>
+        </div>
+
+        <div class="board-shell">
+          <section class="columns-area">
+            <div class="columns-grid">
+              <div class="column-wrap">
+                <div class="column-title">本卦</div>
+                <div id="primaryColumn" class="hexagram-column"></div>
+              </div>
+              <div class="column-wrap">
+                <div class="column-title">变卦</div>
+                <div id="changedColumn" class="hexagram-column"></div>
+              </div>
+            </div>
+          </section>
+
+          <aside id="detailDrawer" class="detail-drawer empty">
+            <div class="drawer-placeholder">点击节点后，这里会显示该节点的局部关系图与完整关系账单。</div>
+          </aside>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="lunar.js"></script>
+  <script defer src="liuyao-app.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleDisplayName</key>
+    <string>ClipMini</string>
+    <key>CFBundleExecutable</key>
+    <string>ClipMini</string>
+    <key>CFBundleIdentifier</key>
+    <string>local.clipmini.app</string>
+    <key>CFBundleIconName</key>
+    <string>AppIcon</string>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    <key>CFBundleName</key>
+    <string>ClipMini</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.48</string>
+	<key>CFBundleVersion</key>
+	<string>49</string>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsLocalNetworking</key>
+        <true/>
+    </dict>
+    <key>NSBonjourServices</key>
+    <array><string>_clipmini._tcp</string></array>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>仅用于读取当前 Wi-Fi 名称，帮助确认朋友是否连接同一网络；不记录或上传位置。</string>
+    <key>NSLocationUsageDescription</key>
+    <string>仅用于读取当前 Wi-Fi 名称，帮助确认连接网络。</string>
+    <key>NSLocalNetworkUsageDescription</key>
+    <string>用于在同一 Wi-Fi 下与朋友互发桌面信号。</string>
+    <key>LSMinimumSystemVersion</key>
+    <string>13.0</string>
+    <key>LSUIElement</key>
+    <true/>
+    <key>NSHighResolutionCapable</key>
+    <true/>
+</dict>
+</plist>

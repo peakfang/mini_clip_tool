@@ -1,0 +1,8 @@
+.build/
+.DS_Store
+outputs/
+work/
+.swiftpm/
+.env
+.env.*
+*.log
